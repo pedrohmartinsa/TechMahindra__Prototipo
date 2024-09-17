@@ -1,14 +1,16 @@
 import FormsButton from "../../components/FormsButton";
 import SetOfInputs from "../../components/SetOfInputs";
+import './style.css'
 
 function Register() {
     return ( 
         <>
-            <div>
+        <body>
+            <div className="formulario__cadastro">
                 <SetOfInputs/>
-                <FormsButton
-                buttonText = "Confirmar"/>
+                <FormsButton buttonText = "Confirmar"/>
             </div>
+        </body>
         </>
      );
 }

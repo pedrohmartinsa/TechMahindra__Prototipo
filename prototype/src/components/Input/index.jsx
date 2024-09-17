@@ -1,9 +1,11 @@
+import './style.css'
+
 function Input( { data } ) {
     return ( 
         <>
             {data.map((forms) =>(
-                <div className="">
-                <p className="ml-4">{forms.texto}</p>
+                <div className="texto__e__input">
+                <p>{forms.texto}</p>
                 <input
                 style={
                     {width: forms.width}
@@ -11,7 +13,7 @@ function Input( { data } ) {
                 type={forms.type} 
                 id={forms.id} 
                 placeholder={forms.backgroundText}
-                className="h-10 bg-gray-500 border border-black rounded-lg"/>
+                />
             </div>
                 
             
