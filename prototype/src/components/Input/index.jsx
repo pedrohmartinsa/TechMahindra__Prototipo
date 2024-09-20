@@ -1,10 +1,8 @@
-import './style.css'
-
 function Input( { data } ) {
     return ( 
         <>
             {data.map((forms) =>(
-                <div className="texto__e__input">
+                <div className="">
                 <p>{forms.texto}</p>
                 <input
                 style={
@@ -13,11 +11,10 @@ function Input( { data } ) {
                 type={forms.type} 
                 id={forms.id} 
                 placeholder={forms.backgroundText}
+                className="border-black border-2"
                 />
             </div>
                 
-            
-            
             ))}
             
         </>
