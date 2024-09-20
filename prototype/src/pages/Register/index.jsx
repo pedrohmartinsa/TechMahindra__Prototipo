@@ -14,32 +14,37 @@ function Register() {
                 </div>
                 
                 <div className="flex ">
-                    <div>
+                    <div className="">
                         <div>
                             <label for="name">Nome:</label>
                             <input type="text" id="name" placeholder="Nome..."/>
                         </div>
                         <div>
-                            <label for="name">Nome:</label>
-                            <input type="text" id="name" placeholder="Nome..."/>
+                            <label for="email">E-mail:</label>
+                            <input type="email" id="email" placeholder="E-mail..."/>
                         </div>
                         <div>
-                            <label for="name">Nome:</label>
-                            <input type="text" id="name" placeholder="Nome..."/>
+                            <label for="cell">Celular:</label>
+                            <input type="number" id="cell" placeholder="(11) 99999-9999"/>
                         </div>
                     </div>
                     <div>
                         <div>
-                            <label for="name">Nome:</label>
-                            <input type="text" id="name" placeholder="Nome..."/>
+                            <label for="cpf">CPF:</label>
+                            <input type="number" id="cpf" placeholder="CPF..."/>
                         </div>
                         <div>
-                            <label for="name">Nome:</label>
-                            <input type="text" id="name" placeholder="Nome..."/>
+                            <label for="year_old">Data de Nascimento:</label>
+                            <input type="date" id="year_old"/>
                         </div>
                         <div>
-                            <label for="name">Nome:</label>
-                            <input type="text" id="name" placeholder="Nome..."/>
+                            <label for="name">Gênero:</label>
+                            <select>
+                                <option value="" selected disabled>Selecione</option>
+                                <option value="masc">Masculino</option>
+                                <option value="fem">Feminino</option>
+                                <option value="none">Prefiro não informar</option>
+                            </select>
                         </div>
                     </div>
                     
