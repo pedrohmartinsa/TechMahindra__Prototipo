@@ -1,5 +1,4 @@
 import FormsButton from "../../components/FormsButton";
-import SetOfInputs from "../../components/SetOfInputs";
 import Seta from './assets/setinha.svg'
 
 function Register() {

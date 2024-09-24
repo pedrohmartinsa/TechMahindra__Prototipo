@@ -1,10 +1,14 @@
-import Register from "./pages/Register"
+import { Outlet } from "react-router-dom"
+import BarraDePesquisa from "./components/BarraDePesquisa"
+import Nav from "./components/Nav"
 
 function App() {
 
   return (
     <>
-      <Register/>
+      <Nav/>
+      <BarraDePesquisa/>
+      <Outlet/>
     </>
   )
 }

@@ -2,9 +2,53 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Home from './pages/Home/index.jsx'
+import VideoCurtos from './pages/VideoCurtos/index.jsx'
+import AoVivo from './pages/AoVivo/index.jsx'
+import Customizar from './pages/Customizar/index.jsx'
+import Notificacoes from './pages/Notificacoes/index.jsx'
+import Configuracoes from './pages/Configuracoes/index.jsx'
+import Perfil from './pages/Perfil/index.jsx'
+import Register from './pages/Register/index.jsx'
+import NewPassword from './pages/NewPassword/index.jsx'
+import JornalDaCorrida from './pages/Home/JornalDaCorrida/index.jsx'
+import Highlights from './pages/Home/HighLights/index.jsx'
+import Global from './pages/VideoCurtos/Global/index.jsx'
+import Seguindo from './pages/VideoCurtos/Seguindo/index.jsx'
+import Criar from './pages/VideoCurtos/Criar/index.jsx'
+
+const router = createBrowserRouter
+(
+  [
+
+  {
+    path: "/",
+    element: <App/>,
+
+    children: [
+      {index: true, element: <Home/>},
+      {path: 'registro', element: <Register/>},
+      {path: 'newPassword', element: <NewPassword/>},
+      {path: 'videosCurtos', element: <VideoCurtos/>, children: [
+        {path: 'global', element: <Global/>},
+        {path: 'seguindo', element: <Seguindo/>},
+        {path: 'criar', element: <Criar/>}
+      ]},
+      {path: 'aoVivo', element: <AoVivo/>},
+      {path: 'customizar', element: <Customizar/>},
+      {path: 'notificacoes', element: <Notificacoes/>},
+      {path: 'perfil', element: <Perfil/>},
+      {path: 'configuracoes', element: <Configuracoes/>}
+    ]
+  }
+
+  ]
+)
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </StrictMode>,
 )
