@@ -6,9 +6,17 @@ function App() {
 
   return (
     <>
+
+    <div className="flex">
+
       <Nav/>
+      <div>
       <BarraDePesquisa/>
       <Outlet/>
+      </div>
+
+    </div>
+      
     </>
   )
 }
