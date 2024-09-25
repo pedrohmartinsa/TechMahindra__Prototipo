@@ -1,7 +1,9 @@
 export default function JornalDaCorrida() {
     return(
         <>
-            <p>jornal</p>
+            <div>
+                jornal
+            </div>
         </>
     )
 }

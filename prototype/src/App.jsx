@@ -10,9 +10,9 @@ function App() {
     <div className="flex">
 
       <Nav/>
-      <div>
-      <BarraDePesquisa/>
-      <Outlet/>
+      <div className="w-full">
+        <BarraDePesquisa/>
+        <Outlet/>
       </div>
 
     </div>

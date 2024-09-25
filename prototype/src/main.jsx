@@ -21,13 +21,16 @@ import Criar from './pages/VideoCurtos/Criar/index.jsx'
 const router = createBrowserRouter
 (
   [
-
+    
   {
     path: "/",
     element: <App/>,
 
     children: [
-      {index: true, element: <Home/>},
+      {path: '/', element: <Home/>, children: [
+        {path: 'jornal', element:<JornalDaCorrida/>},
+        {path: 'highlights', element: <Highlights/>}
+      ]},
       {path: 'registro', element: <Register/>},
       {path: 'newPassword', element: <NewPassword/>},
       {path: 'videosCurtos', element: <VideoCurtos/>, children: [
