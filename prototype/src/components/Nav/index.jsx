@@ -1,69 +1,22 @@
 import { NavLink } from 'react-router-dom'
-import { useState } from 'react'
 
 import Home from './assets/home.svg'
-import HomeSelect from './assets/homeSelect.svg'
 
 import Videos from './assets/videos.svg'
-import VideoSelect from './assets/videoSelect.svg'
 
 import Live from './assets/live.svg'
-import LiveSelect from './assets/liveSelect.svg'
-import LiveRed from './assets/liveRed.svg'
-
 
 import Customizar from './assets/customizar.svg'
-import CustomizarSelect from './assets/customizarSelect.svg'
 
 import Coracao from './assets/coracao.svg'
-import CoracaoSelect from './assets/coracaoSelect.svg'
 
 import Perfil from './assets/perfil.svg'
-import PerfilSelect from './assets/perfilSelect.svg'
 
 import Engrenagem from './assets/engrenagem.svg'
-import EngrenagemSelect from './assets/engrenagemSelect.svg'
 
 
 
 export default function Nav() {
-
-    const cssTextoSelected = 'font-bold drop-shadow-xl'
-    const cssTextoUnselected = ''
-
-    const Unselect = [Home, Videos, Live, Customizar, Coracao, Perfil, Engrenagem]
-    const Select = [HomeSelect, VideoSelect, LiveSelect, CustomizarSelect, CoracaoSelect, PerfilSelect, EngrenagemSelect]
-
-    const [iconHome, setIconHome] = useState(Home)
-
-    const [textoHome, setTextoHome] = useState(cssTextoUnselected)
-
-    const handleClickHome = () => {
-        setIconHome((prev1) => (
-            prev1 == Home ? HomeSelect : Home
-        ))
-
-        setTextoHome((prev2) => (
-            prev2 == cssTextoUnselected ? cssTextoSelected : cssTextoUnselected
-        ))
-    }
-
-    const [iconVideos, setIconVideos] = useState(Videos)
-
-    const [textoVideos, setTextoVideos] = useState(cssTextoUnselected)
-
-    const handleClickVideo = () => {
-        setIconVideos((prev1) => (
-            prev1 == Videos ? VideoSelect : Videos
-        ))
-
-        setTextoVideos((prev2) => (
-            prev2 == cssTextoUnselected ? cssTextoSelected : cssTextoUnselected
-        ))
-    }
-
-
-
 
     const navCss = 'flex gap-6 items-center'
 
@@ -73,15 +26,17 @@ export default function Nav() {
             <h2 className='mt-10'>NomeDaPágina</h2>
             <div className='flex flex-col justify-between gap-6 '>
                 <div>
-                    <NavLink onClick={handleClickHome} to='/' className={navCss}>
-                    <img src={iconHome} alt="" className='w-7'/>
-                    <p className={textoHome}>Home</p>
+                    <NavLink to='/' className={navCss}>
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 24 24">
+                    <path d="M 12 2.0996094 L 1 12 L 4 12 L 4 21 L 11 21 L 11 15 L 13 15 L 13 21 L 20 21 L 20 12 L 23 12 L 12 2.0996094 z M 12 4.7910156 L 18 10.191406 L 18 11 L 18 19 L 15 19 L 15 13 L 9 13 L 9 19 L 6 19 L 6 10.191406 L 12 4.7910156 z"></path>
+                    </svg>
+                    Home
                     </NavLink>
                 </div>
                 <div>
-                    <NavLink onClick={handleClickVideo} to='/videosCurtos' className={navCss}>
-                    <img src={iconVideos} alt="" className='w-7'/>
-                    <p className={textoVideos}>Shorts</p>
+                    <NavLink to='/videosCurtos' className={navCss}>
+                    <img src={Videos} alt="" className='w-7'/>
+                    Shorts
                     </NavLink>
                 </div>
                 <div>
