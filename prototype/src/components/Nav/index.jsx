@@ -1,13 +1,69 @@
 import { NavLink } from 'react-router-dom'
+import { useState } from 'react'
+
 import Home from './assets/home.svg'
-import VideosCurtos from './assets/videos.svg'
-import AoVivo from './assets/live.svg'
-import Spray from './assets/customizar.svg'
+import HomeSelect from './assets/homeSelect.svg'
+
+import Videos from './assets/videos.svg'
+import VideoSelect from './assets/videoSelect.svg'
+
+import Live from './assets/live.svg'
+import LiveSelect from './assets/liveSelect.svg'
+import LiveRed from './assets/liveRed.svg'
+
+
+import Customizar from './assets/customizar.svg'
+import CustomizarSelect from './assets/customizarSelect.svg'
+
 import Coracao from './assets/coracao.svg'
+import CoracaoSelect from './assets/coracaoSelect.svg'
+
 import Perfil from './assets/perfil.svg'
+import PerfilSelect from './assets/perfilSelect.svg'
+
 import Engrenagem from './assets/engrenagem.svg'
+import EngrenagemSelect from './assets/engrenagemSelect.svg'
+
+
 
 export default function Nav() {
+
+    const cssTextoSelected = 'font-bold drop-shadow-xl'
+    const cssTextoUnselected = ''
+
+    const Unselect = [Home, Videos, Live, Customizar, Coracao, Perfil, Engrenagem]
+    const Select = [HomeSelect, VideoSelect, LiveSelect, CustomizarSelect, CoracaoSelect, PerfilSelect, EngrenagemSelect]
+
+    const [iconHome, setIconHome] = useState(Home)
+
+    const [textoHome, setTextoHome] = useState(cssTextoUnselected)
+
+    const handleClickHome = () => {
+        setIconHome((prev1) => (
+            prev1 == Home ? HomeSelect : Home
+        ))
+
+        setTextoHome((prev2) => (
+            prev2 == cssTextoUnselected ? cssTextoSelected : cssTextoUnselected
+        ))
+    }
+
+    const [iconVideos, setIconVideos] = useState(Videos)
+
+    const [textoVideos, setTextoVideos] = useState(cssTextoUnselected)
+
+    const handleClickVideo = () => {
+        setIconVideos((prev1) => (
+            prev1 == Videos ? VideoSelect : Videos
+        ))
+
+        setTextoVideos((prev2) => (
+            prev2 == cssTextoUnselected ? cssTextoSelected : cssTextoUnselected
+        ))
+    }
+
+
+
 
     const navCss = 'flex gap-6 items-center'
 
@@ -17,27 +73,27 @@ export default function Nav() {
             <h2 className='mt-10'>NomeDaPágina</h2>
             <div className='flex flex-col justify-between gap-6 '>
                 <div>
-                    <NavLink to='/' className={navCss}>
-                    <img src={Home} alt="" className='w-7'/>
-                    Home
+                    <NavLink onClick={handleClickHome} to='/' className={navCss}>
+                    <img src={iconHome} alt="" className='w-7'/>
+                    <p className={textoHome}>Home</p>
                     </NavLink>
                 </div>
                 <div>
-                    <NavLink to='/videosCurtos' className={navCss}>
-                    <img src={VideosCurtos} alt="" className='w-7'/>
-                    Shorts
+                    <NavLink onClick={handleClickVideo} to='/videosCurtos' className={navCss}>
+                    <img src={iconVideos} alt="" className='w-7'/>
+                    <p className={textoVideos}>Shorts</p>
                     </NavLink>
                 </div>
                 <div>
                     
                     <NavLink to='/aoVivo' className={navCss}>
-                    <img src={AoVivo} alt=""className='w-7'/>
+                    <img src={Live} alt=""className='w-7'/>
                     Ao Vivo
                     </NavLink>
                 </div>
                 <div>
                     <NavLink to='/customizar' className={navCss}>
-                    <img src={Spray} alt="" className='w-7'/>
+                    <img src={Customizar} alt="" className='w-7'/>
                     Customizar
                     </NavLink>
                 </div>

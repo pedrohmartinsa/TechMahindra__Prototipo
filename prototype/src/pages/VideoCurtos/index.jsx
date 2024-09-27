@@ -9,7 +9,7 @@ const menuCss = 'flex items-center gap-6'
 
     return (
         <div className='flex justify-center mt-6'>
-            <div className=''>
+            <div className='flex flex-col items-center'>
                 <div className='flex gap-32'>
                     <NavLink to='global' className={menuCss}>
                         <img src={Global} alt="" />
