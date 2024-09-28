@@ -20,6 +20,7 @@ import Criar from './pages/VideoCurtos/Criar/index.jsx'
 import SeusVideos from './pages/Perfil/SeusVideos/index.jsx'
 import SuasCustomizacoes from './pages/Perfil/SuasCustomizacoes/index.jsx'
 import Salvos from './pages/Perfil/Salvos/index.jsx'
+import Login from './pages/Login/index.jsx'
 
 const router = createBrowserRouter
 (
@@ -30,7 +31,8 @@ const router = createBrowserRouter
     element: <App/>,
 
     children: [
-      {path: '/', element: <Home/>, children: [
+      {path: '/', element: <Login/>},
+      {path: 'home', element: <Home/>, children: [
         {path: 'jornal', element:<JornalDaCorrida/>},
         {path: 'highlights', element: <Highlights/>}
       ]},

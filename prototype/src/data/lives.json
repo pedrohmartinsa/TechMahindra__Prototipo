@@ -1,27 +1,27 @@
 [
     {
-        "imagem": "ImgVideo",
+        "imagem": "carro.png",
         "timer": "47:23",
         "titulo": "Titulo do Vídeo 1",
         "date": "07 JUN"
     },
 
     {
-        "imagem": "ImgVideo",
+        "imagem": "carro.png",
         "timer": "51:35",
         "titulo": "Titulo do Vídeo 2",
         "date": "15 AGO"
     },
 
     {
-       "imagem": "ImgVideo",
+       "imagem": "carro.png",
         "timer": "49:20",
         "titulo": "Titulo do Vídeo 3",
         "date": "23 FEV"
     },
 
     {
-        "imagem": "ImgVideo",
+        "imagem": "carro.png",
         "timer": "45:20",
         "titulo": "Titulo do Vídeo 4",
         "date": "18 MAR"
