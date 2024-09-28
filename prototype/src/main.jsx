@@ -17,6 +17,9 @@ import Highlights from './pages/Home/HighLights/index.jsx'
 import Global from './pages/VideoCurtos/Global/index.jsx'
 import Seguindo from './pages/VideoCurtos/Seguindo/index.jsx'
 import Criar from './pages/VideoCurtos/Criar/index.jsx'
+import SeusVideos from './pages/Perfil/SeusVideos/index.jsx'
+import SuasCustomizacoes from './pages/Perfil/SuasCustomizacoes/index.jsx'
+import Salvos from './pages/Perfil/Salvos/index.jsx'
 
 const router = createBrowserRouter
 (
@@ -41,7 +44,11 @@ const router = createBrowserRouter
       {path: 'aoVivo', element: <AoVivo/>},
       {path: 'customizar', element: <Customizar/>},
       {path: 'notificacoes', element: <Notificacoes/>},
-      {path: 'perfil', element: <Perfil/>},
+      {path: 'perfil', element: <Perfil/>, children: [
+        {path: 'seusVideos', element: <SeusVideos/>},
+        {path:'suasCustomizacoes', element: <SuasCustomizacoes/>},
+        {path:'salvos',element: <Salvos/>}
+      ]},
       {path: 'configuracoes', element: <Configuracoes/>}
     ]
   }

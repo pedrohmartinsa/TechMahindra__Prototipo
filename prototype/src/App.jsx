@@ -5,19 +5,17 @@ import Nav from "./components/Nav"
 function App() {
 
   return (
-    <>
-
     <div className="flex">
-
-      <Nav/>
-      <div className="w-full">
+      <div className="min-w-60">
+        <div className="fixed">
+          <Nav/>
+        </div>
+      </div>
+      <div className="mx-auto">
         <BarraDePesquisa/>
         <Outlet/>
       </div>
-
     </div>
-      
-    </>
   )
 }
 

@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink, Outlet } from 'react-router-dom'
 import Editar from './assets/editar.svg'
 import Videos from './assets/videos.svg'
 import  Customizacoes from './assets/customizacoes.svg'
@@ -14,8 +14,8 @@ export default function Perfil() {
     const cssOpcoesTexto = 'text-2xl text-slate-500'
     
     return (
-        <>
-            <div className='flex flex-col items-start ml-10 border-b-2 border-slate-500'>
+        <div className=''>
+            <div className='flex flex-col items-start'>
 
                 <div className='flex flex-col items-start'>
 
@@ -30,7 +30,7 @@ export default function Perfil() {
                                 <p className='text-xl'>Nome</p>
                             </div>
                             
-                            <button className='flex gap-x-2 border-2 border-black px-3 py-1 rounded-md'>
+                            <button onClick='' className='flex gap-x-2 border-2 border-black px-3 py-1 rounded-md'>
                                 <img src={Editar} alt="" />
                                 Editar Perfil
                             </button>
@@ -46,22 +46,23 @@ export default function Perfil() {
                 </div>
 
                 <div className='flex gap-x-[6.25rem] '>
-                    <NavLink className={cssOpcoes}>
+                    <NavLink to='seusVideos' className={cssOpcoes}>
                         <img className={cssOpcoesImg} src={Videos} alt="" />
                         <p className={cssOpcoesTexto} >Vídeos</p>
                     </NavLink>
 
-                    <NavLink className={cssOpcoes}>
+                    <NavLink to='suasCustomizacoes' className={cssOpcoes}>
                         <img className={cssOpcoesImg} src={Customizacoes} alt="" />
                         <p className={cssOpcoesTexto}>Customizações</p>
                     </NavLink>
 
-                    <NavLink className={cssOpcoes}>
+                    <NavLink to='salvos' className={cssOpcoes}>
                         <img className={cssOpcoesImg} src={Salvos} alt="" />
                         <p className={cssOpcoesTexto}>Salvos</p>
                     </NavLink>
                 </div>
             </div>
-        </>
+            <Outlet/>
+        </div>
     )
 }

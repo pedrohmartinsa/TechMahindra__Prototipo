@@ -22,8 +22,8 @@ export default function Nav() {
 
     return (
         <>
-        <div className='flex flex-col justify-between h-screen border-r-2 px-10'>
-            <h2 className='mt-10'>NomeDaPágina</h2>
+        <div className='flex flex-col justify-between h-screen min-w-60 border-r-2 px-10'>
+            <h2 className='pt-10'>NomeDaPágina</h2>
             <div className='flex flex-col justify-between gap-6 '>
                 <div>
                     <NavLink to='/' className={navCss}>
