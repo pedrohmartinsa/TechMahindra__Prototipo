@@ -15,7 +15,7 @@ export default function Login() {
 
                 <div className="flex items-end gap-5 self-start mb-40">
                     <img src={Seta} alt="setinha de voltar" />
-                    <h2 className="text-3xl">NomeDaPlataforma</h2>
+                    <h2 className="text-3xl">Formula E</h2>
                     <p className="text-sm"> - login</p>
                 </div>
 
