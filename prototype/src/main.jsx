@@ -2,7 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import {createBrowserRouter, Navigate, RouterProvider} from 'react-router-dom'
 import Home from './pages/Home/index.jsx'
 import VideoCurtos from './pages/VideoCurtos/index.jsx'
 import AoVivo from './pages/AoVivo/index.jsx'
@@ -21,7 +21,6 @@ import SeusVideos from './pages/Perfil/SeusVideos/index.jsx'
 import SuasCustomizacoes from './pages/Perfil/SuasCustomizacoes/index.jsx'
 import Salvos from './pages/Perfil/Salvos/index.jsx'
 import Login from './pages/Login/index.jsx'
-import Teste from './pages/Teste'
 import Customizar from './pages/Games/Customizar/index.jsx'
 import Quiz from './pages/Games/Quiz/index.jsx'
 
@@ -36,26 +35,30 @@ const router = createBrowserRouter
     children: [
       {path: '/', element: <Login/>},
       {path: 'home', element: <Home/>, children: [
-        {path: 'jornal', element:<JornalDaCorrida/>},
-        {path: 'highlights', element: <Highlights/>}
+          {index: true, element: <Navigate to="jornal"/>},
+          {path: 'jornal', element:<JornalDaCorrida/>},
+          {path: 'highlights', element: <Highlights/>}
       ]},
       {path: 'registro', element: <Register/>},
       {path: 'newPassword', element: <NewPassword/>},
       {path: 'videosCurtos', element: <VideoCurtos/>, children: [
-        {path: 'global', element: <Global/>},
-        {path: 'seguindo', element: <Seguindo/>},
-        {path: 'criar', element: <Criar/>}
+          {index: true, element: <Navigate to="global"/>},
+          {path: 'global', element: <Global/>},
+          {path: 'seguindo', element: <Seguindo/>},
+          {path: 'criar', element: <Criar/>}
       ]},
       {path: 'aoVivo', element: <AoVivo/>},
       {path: 'games', element: <Games/>, children: [
-        {path: 'customizar', element: <Customizar/>},
-        {path: 'quiz', element:<Quiz/>}
+          {index: true, element: <Navigate to="customizar"/>},
+          {path: 'customizar', element: <Customizar/>},
+          {path: 'quiz', element:<Quiz/>}
       ]},
       {path: 'notificacoes', element: <Notificacoes/>},
       {path: 'perfil', element: <Perfil/>, children: [
-        {path: 'seusVideos', element: <SeusVideos/>},
-        {path:'suasCustomizacoes', element: <SuasCustomizacoes/>},
-        {path:'salvos',element: <Salvos/>}
+          {index: true, element: <Navigate to="seusVideos"/>},
+          { path: 'seusVideos', element: <SeusVideos/>},
+          {path:'suasCustomizacoes', element: <SuasCustomizacoes/>},
+          {path:'salvos',element: <Salvos/>}
       ]},
       {path: 'configuracoes', element: <Configuracoes/>}
     ]
