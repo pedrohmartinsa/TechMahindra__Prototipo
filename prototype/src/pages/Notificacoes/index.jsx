@@ -5,7 +5,7 @@ export default function Games() {
     return (
         <>
             <div className='mt-20 mb-20'>
-                <div className='flex flex-col justify-center items-center gap-y-14 drop-shadow-2xl bg-white'>
+                <div className='flex flex-col justify-center items-center gap-y-14 drop-shadow-2xl bg-white p-10'>
 
                 <div className='flex items-center w-72 gap-x-3 drop-shadow-2xl bg-white'>
                     <div>
