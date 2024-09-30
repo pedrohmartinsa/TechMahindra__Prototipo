@@ -1,6 +1,7 @@
 import BoxesJornal from "../../../components/JORNAL/BoxesJornal"
 
 export default function BoxNoticias() {
+ 
     return(
         <>
         <div className="grid grid-rows-2 grid-cols-3 gap-x-4 gap-y-5 w-[54.063rem] h-[38.75rem]">
