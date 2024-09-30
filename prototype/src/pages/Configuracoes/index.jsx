@@ -1,10 +1,10 @@
 export default function Configuracoes() {
     return (
         <>
-            <main className="bg-white border-[0.063rem] w-[75rem] h-[56.25rem] m-20 flex justify-center rounded drop-shadow-2xl">
+            <main className="flex items-center justify-start bg-white border-[0.063rem] w-[75rem] h-[56.25rem] m-20 rounded drop-shadow-2xl">
 
-                    <div className="flex flex-col justify-center">
-                        <div className="">
+                    <div className="">
+                        <div className="flex flex-col gap-y-4">
 
                             <div>
                             <h2>Gerenciamento de Usuários</h2>

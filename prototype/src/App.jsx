@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom"
 import BarraDePesquisa from "./components/BarraDePesquisa"
 import Nav from "./components/Nav"
+import Usuario from "./components/Usuario"
 
 function App() {
 
@@ -12,7 +13,12 @@ function App() {
         </div>
       </div>
       <div className="mx-auto">
-        <BarraDePesquisa/>
+        <div className="flex items-center justify-center">
+          <BarraDePesquisa/>
+          <Usuario/>
+        </div>
+        
+
         <Outlet/>
       </div>
     </div>

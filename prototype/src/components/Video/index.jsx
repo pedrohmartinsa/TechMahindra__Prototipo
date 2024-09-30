@@ -16,7 +16,7 @@ export default function Video() {
             <div className='flex items-end gap-x-7'>
 
                 <div className='w-[27.5rem] h-[40rem] drop-shadow-2xl bg-white rounded-md'>
-                    <p className=''>video</p>
+                    <img  className='h-full rounded-md' src="https://img.freepik.com/fotos-gratis/carro-eletrico-3d-com-simbolo-de-bateria-carregada_23-2148972408.jpg" alt="" />
                 </div>
                 
                 <div className='flex flex-col gap-y-3'>

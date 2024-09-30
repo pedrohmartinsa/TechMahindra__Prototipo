@@ -26,7 +26,7 @@ export default function Perfil() {
                         <div className='flex flex-col'>
 
                             <div className='mb-8'>
-                                <h3 className='text-2xl font-bold'>NomeDeUsuário</h3>
+                                <h3 className='text-2xl font-bold'>{localStorage.getItem('name') === null ? 'Usuário' : localStorage.getItem('name')}</h3>
                                 <p className='text-xl'>Nome</p>
                             </div>
                             

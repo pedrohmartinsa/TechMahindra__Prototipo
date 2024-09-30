@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom'
 
-import Home from './assets/home.svg'
+import './style.css'
 
 import Videos from './assets/videos.svg'
 
@@ -47,7 +47,7 @@ export default function Nav() {
                     </NavLink>
                 </div>
                 <div>
-                    <NavLink to='/customizar' className={navCss}>
+                    <NavLink to='/games' className={navCss}>
                     <img src={Games} alt="" className='w-7'/>
                     Games
                     </NavLink>

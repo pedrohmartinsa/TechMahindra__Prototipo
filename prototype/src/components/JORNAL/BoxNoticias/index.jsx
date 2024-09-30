@@ -1,43 +1,39 @@
-import BoxesJornal from "../../../components/JORNAL/BoxesJornal"
+import BoxesPequeno from "../../HIGHLIGHTS/BoxesPequeno";
+import carroImg from '../../../../public/carro.png'
 
 export default function BoxNoticias() {
- 
+
+    const informacoes = [
+        {
+            imagem: 'https://racingonline.com.br/wp-content/uploads/2023/07/EPS915_160646SB1_0856-2048x2048-1.jpg',
+            titulo: 'Titulo da Notícia 1',
+            date: '07 JUN'
+        },
+
+        {
+            imagem: 'https://racingonline.com.br/wp-content/uploads/2023/07/EPS915_160646SB1_0856-2048x2048-1.jpg',
+            titulo: 'Titulo da Notícia 2',
+            date: '15 AGO'
+        },
+
+        {
+            imagem: 'https://racingonline.com.br/wp-content/uploads/2023/07/EPS915_160646SB1_0856-2048x2048-1.jpg',
+            titulo: 'Titulo da Notícia 3',
+            date: '23 FEV'
+        },
+        
+        {
+            imagem: 'https://racingonline.com.br/wp-content/uploads/2023/07/EPS915_160646SB1_0856-2048x2048-1.jpg',
+            titulo: 'Titulo da Notícia 4',
+            date: '18 MAR'
+        },
+    ]
+
+
     return(
         <>
-        <div className="grid grid-rows-2 grid-cols-3 gap-x-4 gap-y-5 w-[54.063rem] h-[38.75rem]">
-
-            <div className="flex col-start-1 col-end-3 drop-shadow-2xl bg-white rounded-br-lg">
-                <BoxesJornal
-                imagem=''
-                titulo='Título da notícia 1'
-                data='08 DEZ'
-                />
-            </div>
-
-            <div className="flex col-start-3 col-end-4 drop-shadow-2xl bg-white rounded-bl-lg">
-                <BoxesJornal
-                imagem=''
-                titulo='Título da notícia 2'
-                data='04 FEV'
-                />
-            </div>
-
-            <div className='flex col-start-1 col-end-2 drop-shadow-2xl bg-white rounded-bl-lg'>
-                <BoxesJornal
-                imagem=''
-                titulo='Título da notícia 3'
-                data='18 JAN'
-                />
-            </div>
-
-            <div className=" flex col-start-2 col-end-4 drop-shadow-2xl bg-white rounded-br-lg">
-                <BoxesJornal
-                imagem=''
-                titulo='Título da notícia 4'
-                data='12 JUN'
-                />
-            </div>
-
+        <div className="grid grid-cols-2 grid-rows-2 gap-x-5 gap-y-7 ">
+            <BoxesPequeno data={informacoes}/>
         </div>
         </>
     )

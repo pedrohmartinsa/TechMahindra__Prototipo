@@ -1,8 +1,12 @@
 import { NavLink } from "react-router-dom";
 import FormsButton from "../../components/FormsButton";
 import Seta from './assets/setinha.svg'
+import { useState } from "react";
 
 export default function Login() {
+
+
+
     return (
         <>
         <main className="bg-white border-[0.063rem] w-[75rem] h-[56.25rem] m-20 flex justify-center rounded drop-shadow-2xl">
@@ -19,30 +23,32 @@ export default function Login() {
 
                     <div className="flex flex-col">
                         <label htmlFor="userName">Nome de Usuário:</label>
-                        <input className='text-x w-96 border-2 rounded-md px-2' type="text" id="userName" placeholder="userName..."/>
+                        <input required onChange={(e) => localStorage.setItem( 'name' ,e.target.value)} className='text-x w-96 border-2 rounded-md px-2' type="text" id="userName" placeholder="userName..."/>
                     </div>
 
-                    <div>
+                    <form className="flex flex-col items-end">
 
                         <div className="flex flex-col">
                             <label htmlFor="senha">Senha:</label>
-                            <input className='text-x w-96 border-2 rounded-md px-2' type="text" id="senha" placeholder="Senha..." />
-                        </div>
+                            <input required className='text-x w-96 border-2 rounded-md px-2' type="text" id="senha" placeholder="Senha..." />
 
-                        <div className="flex justify-between">
+                            <div className="flex justify-between">
 
-                            <a className="text-xs" href="">Esqueci minha senha.</a>
-                            <a className="text-xs" href="">Não tenho cadastro.</a>
+                                <a className="text-xs" href="">Esqueci minha senha.</a>
+                                <a className="text-xs" href="">Não tenho cadastro.</a>
                             
+                             </div>
+                        
                         </div>
+                        
 
-                    </div>
+                        <input className='mt-10 bg-[#d44a4a] w-[210px] rounded border-black border-[0.063rem]' type="submit" value='Entrar' ></input>
+                        
+                    </form>
     
                 </div>
 
-                <div className="mt-20">
-                    <FormsButton buttonText = "Entrar"/>
-                </div>
+                
             </div>
             
         </main>

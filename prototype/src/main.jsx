@@ -34,7 +34,7 @@ const router = createBrowserRouter
     element: <App/>,
 
     children: [
-      {path: '/', element: <Teste/>},
+      {path: '/', element: <Login/>},
       {path: 'home', element: <Home/>, children: [
         {path: 'jornal', element:<JornalDaCorrida/>},
         {path: 'highlights', element: <Highlights/>}
@@ -47,7 +47,7 @@ const router = createBrowserRouter
         {path: 'criar', element: <Criar/>}
       ]},
       {path: 'aoVivo', element: <AoVivo/>},
-      {path: 'customizar', element: <Games/>, children: [
+      {path: 'games', element: <Games/>, children: [
         {path: 'customizar', element: <Customizar/>},
         {path: 'quiz', element:<Quiz/>}
       ]},
