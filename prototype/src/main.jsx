@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './pages/Home/index.jsx'
 import VideoCurtos from './pages/VideoCurtos/index.jsx'
 import AoVivo from './pages/AoVivo/index.jsx'
-import Customizar from './pages/Customizar/index.jsx'
+import Games from './pages/Games/index.jsx'
 import Notificacoes from './pages/Notificacoes/index.jsx'
 import Configuracoes from './pages/Configuracoes/index.jsx'
 import Perfil from './pages/Perfil/index.jsx'
@@ -21,6 +21,9 @@ import SeusVideos from './pages/Perfil/SeusVideos/index.jsx'
 import SuasCustomizacoes from './pages/Perfil/SuasCustomizacoes/index.jsx'
 import Salvos from './pages/Perfil/Salvos/index.jsx'
 import Login from './pages/Login/index.jsx'
+import Teste from './pages/Teste'
+import Customizar from './pages/Games/Customizar/index.jsx'
+import Quiz from './pages/Games/Quiz/index.jsx'
 
 const router = createBrowserRouter
 (
@@ -31,7 +34,7 @@ const router = createBrowserRouter
     element: <App/>,
 
     children: [
-      {path: '/', element: <Login/>},
+      {path: '/', element: <Teste/>},
       {path: 'home', element: <Home/>, children: [
         {path: 'jornal', element:<JornalDaCorrida/>},
         {path: 'highlights', element: <Highlights/>}
@@ -44,7 +47,10 @@ const router = createBrowserRouter
         {path: 'criar', element: <Criar/>}
       ]},
       {path: 'aoVivo', element: <AoVivo/>},
-      {path: 'customizar', element: <Customizar/>},
+      {path: 'customizar', element: <Games/>, children: [
+        {path: 'customizar', element: <Customizar/>},
+        {path: 'quiz', element:<Quiz/>}
+      ]},
       {path: 'notificacoes', element: <Notificacoes/>},
       {path: 'perfil', element: <Perfil/>, children: [
         {path: 'seusVideos', element: <SeusVideos/>},

@@ -6,7 +6,7 @@ import Videos from './assets/videos.svg'
 
 import Live from './assets/live.svg'
 
-import Customizar from './assets/customizar.svg'
+import Games from './assets/games.svg'
 
 import Coracao from './assets/coracao.svg'
 
@@ -48,8 +48,8 @@ export default function Nav() {
                 </div>
                 <div>
                     <NavLink to='/customizar' className={navCss}>
-                    <img src={Customizar} alt="" className='w-7'/>
-                    Customizar
+                    <img src={Games} alt="" className='w-7'/>
+                    Games
                     </NavLink>
                 </div>
                 <div>
