@@ -39,7 +39,7 @@ export default function AoVivo() {
         <>
             <div className="flex flex-col justify-center items-center mt-20">
                 <h3 className="font-bold text-2xl mb-12">Lives Passadas</h3>
-                <div className="grid grid-cols-2 grid-rows-2 gap-x-5 gap-y-7 ">
+                <div className="flex flex-wrap justify-center gap-5 max-w-4xl ">
                     <BoxesPequeno data={informacoes}/>
                 </div>
             </div>

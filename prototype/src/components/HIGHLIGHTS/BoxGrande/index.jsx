@@ -37,7 +37,7 @@ export default function BoxGrande() {
 
     return(
         <>
-        <div className="grid grid-cols-2 grid-rows-2 gap-x-5 gap-y-7 ">
+        <div className="flex flex-wrap justify-center gap-5 max-w-4xl ">
             <BoxesPequeno data={informacoes}/>
         </div>
         </>
