@@ -8,13 +8,13 @@ export default function BoxesPequeno({ data }) {
         <>
 
         {data.map((info, index) => (
-        <div key={index} className="flex flex-col w-[26.25rem] h-[18.75rem] drop-shadow-2xl bg-white">
+        <div key={index} className="flex flex-col w-[26.25rem] h-[18.75rem] drop-shadow-2xl bg-white rounded">
 
             <div className="">
 
                 <div className="relative">
                     <img src={info.imagem} alt="" className={cssImg}/>
-                    <div className=""><span className="absolute bottom-3 right-3 text-white bg-black/30 rounded-md px-1">{info.timer}</span></div>
+                    <div className=""><span className="absolute bottom-3 right-3 text-quaternaria bg-black/30 rounded-md px-1">{info.timer}</span></div>
                 </div>
 
                 <div className="ml-6 mt-6">

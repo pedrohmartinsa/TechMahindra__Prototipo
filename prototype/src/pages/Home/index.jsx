@@ -13,12 +13,12 @@ export default function Home() {
 
                     <NavLink to='jornal' className={menuCss}>
                         <img src={Jornal} alt="" className='w-7'/>
-                        Jornal da Corrida
+                        <h3>Jornal da Corrida</h3>
                     </NavLink>
 
                     <NavLink to='highlights' className={menuCss}>
                         <img src={Estrela} alt="" className='w-7'/>
-                        HighLights
+                        <h3>HighLights</h3>
                     </NavLink>
                 </div>
                 <div className='mx-16'>

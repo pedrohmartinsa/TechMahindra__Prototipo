@@ -23,7 +23,7 @@ export default function Nav() {
     return (
         <>
         <div className='flex flex-col justify-between h-screen min-w-60 border-r-2 px-10'>
-            <NavLink to='/' className='pt-10'>Formula E</NavLink>
+            <NavLink to='/' className='pt-10'>E-hub</NavLink>
             <div className='flex flex-col justify-between gap-6 '>
                 <div>
                     <NavLink to='home' className={navCss}>

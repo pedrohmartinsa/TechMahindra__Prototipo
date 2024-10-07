@@ -14,12 +14,12 @@ export default function Games() {
 
                     <NavLink to='customizar' className={menuCss}>
                         <img src={Customizar} alt="" className='w-7'/>
-                        Customizar
+                        <h3>Customizar</h3>
                     </NavLink>
 
                     <NavLink to='quiz' className={menuCss}>
                         <img src={Quiz} alt="" className='w-7'/>
-                        Quiz
+                        <h3>Quiz</h3>
                     </NavLink>
                 </div>
                 <div className='mx-16'>

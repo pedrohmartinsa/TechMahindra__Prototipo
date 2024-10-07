@@ -7,17 +7,17 @@ import Foto from './assets/fotoUsuario.svg'
 
 export default function Perfil() {
 
-    const cssOpcoes = 'flex items-center'
+    const cssOpcoes = 'flex items-start'
 
     const cssOpcoesImg = 'mr-3'
 
     const cssOpcoesTexto = 'text-2xl text-slate-500'
     
     return (
-        <div className=''>
+        <div className='ml-8'>
             <div className='flex flex-col items-start'>
 
-                <div className='flex flex-col items-start'>
+                <div className='flex flex-col'>
 
                     <div className='flex items-center gap-x-6 my-9'>
                         

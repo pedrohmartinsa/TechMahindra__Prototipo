@@ -13,17 +13,17 @@ const menuCss = 'flex items-center gap-6'
                 <div className='flex gap-32'>
                     <NavLink to='global' className={menuCss}>
                         <img src={Global} alt="" />
-                        Global
+                        <h3>Global</h3>
                     </NavLink>
 
                     <NavLink to='seguindo' className={menuCss}>
                         <img src={Pessoas} alt="" />
-                        Seguindo
+                        <h3>Seguindo</h3>
                     </NavLink>
 
                     <NavLink to='criar' className={menuCss}>
                         <img src={Video} alt="" />
-                        Criar
+                        <h3>Criar</h3>
                     </NavLink>
                 </div>
                 <Outlet/>
