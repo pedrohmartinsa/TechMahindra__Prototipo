@@ -24,8 +24,7 @@ import Login from './pages/Login/index.jsx'
 import Customizar from './pages/Games/Customizar/index.jsx'
 import Quiz from './pages/Games/Quiz/index.jsx'
 
-const router = createBrowserRouter
-(
+const router = createBrowserRouter(
   [
     
   {
